@@ -13,39 +13,43 @@
             color: #333;
             background-color: #f4f4f9;
         }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            overflow: hidden;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        header {
-            background: #4CAF50;
+        .navbar {
+            background: #333;
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
-            border-radius: 8px 8px 0 0;
         }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .contact-info a {
+        .navbar a {
             color: #fff;
             text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        .hero {
+            background: #4CAF50;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
         }
         .section {
             margin: 20px 0;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             border-bottom: 2px solid #4CAF50;
@@ -71,25 +75,36 @@
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #4CAF50;
+            background: #333;
             color: #fff;
-            border-radius: 0 0 8px 8px;
             margin-top: 20px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Harshit Modi</h1>
-            <div class="contact-info">
-                <p>Phone: 312-493-4094 | Email: <a href="mailto:modiharshit01@gmail.com">modiharshit01@gmail.com</a> | GitHub: <a href="https://github.com/hmodi51" target="_blank">https://github.com/hmodi51</a></p>
-            </div>
-        </div>
-    </header>
+    <div class="navbar">
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hero">
+        <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img">
+        <h1>Harshit Modi</h1>
+        <p>Computer Science Student at University of Illinois Chicago</p>
+    </div>
 
     <div class="container">
-        <div class="section">
+        <div class="section" id="education">
             <h2>Education</h2>
             <ul>
                 <li>
@@ -101,7 +116,7 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div class="section" id="projects">
             <h2>Projects</h2>
             <ul>
                 <li>
@@ -132,7 +147,7 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div class="section" id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>
@@ -146,7 +161,7 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div class="section" id="work-experience">
             <h2>Work Experience</h2>
             <ul>
                 <li>
@@ -165,6 +180,13 @@
                     Developed scripts to extract relevant information and parse the output of a state analysis tool, translating the data into visual representations. Investigated libraries like D3.js to create clean, interactive visualizations. This role required strong analytical skills and attention to detail.
                 </li>
             </ul>
+        </div>
+        
+        <div class="section" id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me at:</p>
+            <p>Email: <a href="mailto:modiharshit01@gmail.com">modiharshit01@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/hmodi51" target="_blank">https://github.com/hmodi51</a></p>
         </div>
     </div>
     
