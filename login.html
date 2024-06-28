@@ -6,6 +6,7 @@
         window.onload = function() {
             var form = document.querySelector('form');
             form.onsubmit = function(event) {
+                event.preventDefault(); 
                 alert('Coming Soon');    
             }
         }
