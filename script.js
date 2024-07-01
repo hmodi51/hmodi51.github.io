@@ -23,7 +23,7 @@ cells.forEach(cell => {
             gameOver = true;
         } else {
             currentplayer = currentplayer === 'X' ? 'O' : 'X';
-            document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s turn`;
+            document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
         }
     });
 });
