@@ -27,21 +27,62 @@ cells.forEach(cell => {
 });
 
 
-function aimove(){
+function aimove() {
     currentplayer = 'O';
-        let randomint;
-        document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
-         randomint  = Math.floor(Math.random() * 9);
-       //  console.log("random int is " , randomint);
-        while(!checkfill(cells[randomint])){
-       //     console.log("random int is " , randomint);
-         randomint = Math.floor(Math.random() * 9);
+    let bestScore = -Infinity;
+    let move;
+
+    for (let i = 0; i < cells.length; i++) {
+        if (cells[i].innerText === '') {
+            cells[i].innerText = currentplayer;
+            let score = minimax(cells, 0, false);
+            cells[i].innerText = '';
+            if (score > bestScore) {
+                bestScore = score;
+                move = i;
+            }
         }
-       // console.log("int is" ,  randomint);
-        randomcell = cells[randomint];
-        randomcell.innerText = currentplayer;
+    }
+
+    if (move !== undefined) {
+        cells[move].innerText = currentplayer;
         result(currentplayer);
-        currentplayer= 'X';
+    }
+    currentplayer = 'X';
+}
+
+function minimax(cells, depth, isMaximizing) {
+    if (checkWin('O')) {
+        return 1;
+    } else if (checkWin('X')) {
+        return -1;
+    } else if (isDraw()) {
+        return 0;
+    }
+
+    if (isMaximizing) {
+        let bestScore = -Infinity;
+        for (let i = 0; i < cells.length; i++) {
+            if (cells[i].innerText === '') {
+                cells[i].innerText = 'O';
+                let score = minimax(cells, depth + 1, false);
+                cells[i].innerText = '';
+                bestScore = Math.max(score, bestScore);
+            }
+        }
+        return bestScore;
+    } else {
+        let bestScore = Infinity;
+        for (let i = 0; i < cells.length; i++) {
+            if (cells[i].innerText === '') {
+                cells[i].innerText = 'X';
+                let score = minimax(cells, depth + 1, true);
+                cells[i].innerText = '';
+                bestScore = Math.min(score, bestScore);
+            }
+        }
+        return bestScore;
+    }
 }
         
 
