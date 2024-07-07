@@ -22,13 +22,13 @@ cells.forEach(cell => {
         await new Promise(resolve => setTimeout(resolve, 1000))
         if (gameOver!= true){
           aimove();
+          document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
     }
     });
 });
 
 
 function aimove() {
-    currentplayer = 'O';
     let bestScore = -Infinity;
     let move;
 
@@ -107,8 +107,10 @@ function minimax(cells, depth, isMaximizing) {
         document.getElementById('gameStatus').innerText = 'Draw!';
         gameOver = true;
     } else {
+        currentplayer = 'O';
+        document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
         return;
-        //document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
+       
     }
  }
 
