@@ -19,10 +19,11 @@ cells.forEach(cell => {
         cell.innerText = currentplayer;
         //console.log("line 20" , currentplayer)
         result(currentplayer);
+       // currentplayer = 'O';
+        //document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
         await new Promise(resolve => setTimeout(resolve, 1000))
         if (gameOver!= true){
           aimove();
-          document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
     }
     });
 });
@@ -48,7 +49,7 @@ function aimove() {
         cells[move].innerText = currentplayer;
         result(currentplayer);
     }
-    currentplayer = 'X';
+    // currentplayer = 'X';
 }
 
 function minimax(cells, depth, isMaximizing) {
@@ -107,8 +108,14 @@ function minimax(cells, depth, isMaximizing) {
         document.getElementById('gameStatus').innerText = 'Draw!';
         gameOver = true;
     } else {
+        // currentplayer = 'O';
+        if(currentplayer == 'O'){
+            currentplayer = 'X';
+        }
+        else{
         currentplayer = 'O';
-        document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
+        }
+         document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
         return;
        
     }
