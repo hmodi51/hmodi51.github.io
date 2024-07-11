@@ -1,5 +1,23 @@
+
 const cells = document.querySelectorAll('.cell');
-let currentplayer = 'X';
+
+let currentplayer;
+const playerYouButton = document.getElementById('You');
+const playerComputerButton = document.getElementById('Computer');
+playerYouButton.addEventListener('click', () => {
+    currentplayer = 'X';
+    gameSection.style.display = 'block';
+    choice.style.display = 'none';
+    startGame();
+});
+playerComputerButton.addEventListener('click', () => {
+    currentplayer = 'O';
+    gameSection.style.display = 'block';
+    choice.style.display = 'none';
+    startGame();
+});
+
+function startGame() {
 let gameOver = false;
 const winComb = [ 
                 [0,1,2] , [3,4,5] , [6,7,8],
@@ -9,6 +27,9 @@ const winComb = [
 
 document.getElementById('gameStatus').innerText = `Player ${currentplayer}'s Turn`;
 console.log("currentplayer is " , currentplayer);
+if (currentplayer == 'O'){
+    aimove();
+}
 
 cells.forEach(cell => {
     cell.addEventListener('click', async function() {
@@ -36,7 +57,7 @@ function aimove() {
     for (let i = 0; i < cells.length; i++) {
         if (cells[i].innerText === '') {
             cells[i].innerText = currentplayer;
-            let score = minimax(cells, 0, false);
+            let score = minimax(cells, 0, false , -Infinity , +Infinity);
             cells[i].innerText = '';
             if (score > bestScore) {
                 bestScore = score;
@@ -52,7 +73,7 @@ function aimove() {
     // currentplayer = 'X';
 }
 
-function minimax(cells, depth, isMaximizing) {
+function minimax(cells, depth, isMaximizing , alpha , beta) {
     if (checkWin('O')) {
         return 1;
     } else if (checkWin('X')) {
@@ -66,9 +87,13 @@ function minimax(cells, depth, isMaximizing) {
         for (let i = 0; i < cells.length; i++) {
             if (cells[i].innerText === '') {
                 cells[i].innerText = 'O';
-                let score = minimax(cells, depth + 1, false);
+                let score = minimax(cells, depth + 1, false , alpha , beta);
                 cells[i].innerText = '';
                 bestScore = Math.max(score, bestScore);
+                alpha = Math.max(alpha , bestScore);
+                if (beta <=alpha){
+                    break;
+                }
             }
         }
         return bestScore;
@@ -77,9 +102,13 @@ function minimax(cells, depth, isMaximizing) {
         for (let i = 0; i < cells.length; i++) {
             if (cells[i].innerText === '') {
                 cells[i].innerText = 'X';
-                let score = minimax(cells, depth + 1, true);
+                let score = minimax(cells, depth + 1, true , alpha , beta);
                 cells[i].innerText = '';
                 bestScore = Math.min(score, bestScore);
+                beta = Math.min(beta , bestScore);
+                if(beta <=alpha){
+                    break;
+                }
             }
         }
         return bestScore;
@@ -131,4 +160,5 @@ function minimax(cells, depth, isMaximizing) {
 
 function isDraw() {
     return [...cells].every(cell => cell.innerText.trim() !== '');
+}
 }
