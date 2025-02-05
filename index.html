@@ -1,213 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshit Modi's Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-        .navbar {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-        }
-        .hero {
-            background: #4CAF50;
-            color: #fff;
-            padding: 50px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            margin: 0;
-            font-size: 48px;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            overflow: hidden;
-        }
-        .section {
-            margin: 20px 0;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .section h2 {
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-            color: #4CAF50;
-        }
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .section ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid #ccc;
-        }
-        .section ul li:last-child {
-            border-bottom: none;
-        }
-        .section ul li strong {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-        .profile-img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            display: block;
-            margin: 0 auto 20px;
-        }
-    </style>
+<!-- 2025-02-05 Wed 01:08 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Personal Website</title>
+<meta name="author" content="Your Name" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <div class="navbar">
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#contact">Contact</a>
-        <a href="http://172.29.2.104/">Login</a>
-        <a href="game.html">play game</a>
-        <a href="Resume">Download Resume</a>
-    </div>
+<div id="content" class="content">
+<h1 class="title">My Personal Website</h1>
 
-    <div class="hero">
-        <img src="images/dp.jpg" alt="Profile Image" class="profile-img">
-        <h1>Harshit Modi</h1>
-        <p>Computer Science Student at University of Illinois Chicago</p>
-    </div>
+<div id="outline-container-org81a9902" class="outline-2">
+<h2 id="org81a9902">Welcome</h2>
+<div class="outline-text-2" id="text-org81a9902">
+<p>
+Welcome to my personal website. Here you can find information about my projects, interests, and contact information.
+</p>
+</div>
+</div>
 
-    <div class="container">
-        <div class="section" id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Bachelor of Science in Computer Science, University of Illinois Chicago</strong><br>
-                    Expected May 2025<br>
-                    Courses: Data Structures, Algorithms, Systems Programming, Database Management
-                </li>
-            </ul>
-        </div>
+<div id="outline-container-org8d5ca75" class="outline-2">
+<h2 id="org8d5ca75">About Me</h2>
+<div class="outline-text-2" id="text-org8d5ca75">
+<p>
+I am a passionate individual interested in [your field or hobby]. I enjoy working on projects that allow me to explore new technologies and improve my skills.
+</p>
+</div>
+</div>
 
-        <div class="section" id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Tic Tac Toe AI Project (Unbeatable)</strong>
-                    Engineered an unbeatable Tic Tac Toe AI using the Minimax algorithm, crafted within a web environment utilizing HTML, CSS, and JavaScript.<br>
-                    Focused on user experience by creating a responsive and visually appealing interface, ensuring engaging and challenging gameplay against a flawless AI.<br>
-                    Demonstrated advanced problem-solving skills by effectively applying algorithmic strategies to ensure the AI always reaches at least a draw.<br>
-                    <a href="game.html"><strong>Play Game</strong></a>
-                </li>
-                <li>
-                    <strong>Simple Shell Program Project:</strong>
-                    Developed a simple shell program in C that mimics the functionality of traditional Unix shells. This shell allows users to execute various commands, manage processes, and interact with the operating system through a command line interface. Key features include input/output redirection, background process management, and a built-in command for changing directories.<br>
-                    Technologies used: C, GCC Compiler, GDB Debugger
-                </li>
-                <li>
-                    <strong>Secure CLI Password Manager:</strong>
-                    Created a command-line interface (CLI) based password manager in Python, aimed at securely storing and retrieving passwords. The manager employs AES-256 encryption and a Key Derivation Function (KDF) to ensure enhanced security. PostgreSQL is used for efficient data storage and retrieval. The project emphasizes cryptographic security and data integrity.<br>
-                    Technologies used: Python, VSCode, PostgreSQL, AES-256, KDF
-                </li>
-                <li>
-                    <strong>Music Library Management System:</strong>
-                    Designed and implemented a Music Library Management System using C++, focusing on efficient data structure usage to manage music records. The system supports loading, searching, clearing, and exporting music records, as well as viewing library statistics. This project showcases skills in object-oriented programming and efficient data handling.<br>
-                    Technologies used: C++, Clion
-                </li>
-                <li>
-                    <strong>AppStore Review Scraper and Analysis Tool:</strong>
-                    Developed an application to scrape reviews, ratings, and other relevant details from the AppStore using web crawling techniques. The extracted data is stored in a CSV file for further analysis. This project involved handling web requests, parsing HTML content, and ensuring data integrity.<br>
-                    Technologies used: Python, PyCharm
-                </li>
-                <li>
-                    <strong>BlackJack Game:</strong>
-                    Created a fully functional BlackJack game using JavaFX, providing an interactive gaming experience that simulates a real blackjack environment. Players can place bets, hit, stand, and compare their hand value to the dealer’s to win virtual currency. This project demonstrates proficiency in Java and GUI development.<br>
-                    Technologies used: JavaFX, Java, IntelliJIDEA
-                </li>
-            </ul>
-        </div>
+<div id="outline-container-orgd6a6846" class="outline-2">
+<h2 id="orgd6a6846">Projects</h2>
+<div class="outline-text-2" id="text-orgd6a6846">
+<p>
+Here are some of the projects I've worked on:
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/yourgithub">Project 1</a>: A brief description of your project.</li>
+<li><a href="https://github.com/yourgithub">Project 2</a>: A brief description of your project.</li>
+<li>More projects can be found on my <a href="https://github.com/yourgithub">GitHub</a>.</li>
+</ul>
+</div>
+</div>
 
-        <div class="section" id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>
-                    <strong>Programming Languages:</strong> Java, Python, C++, C, F#</li>
-                <li>
-                    <strong>Soft Skills:</strong> Communication, Problem-Solving, Teamwork</li>
-                <li>
-                    <strong>Database:</strong> MySQL, SQLite, PostgreSQL</li>
-                <li>
-                    <strong>Technologies and Tools:</strong> PyCharm, Spyder, Clion, Visual Studio, NetBeans, MySQL, Ubuntu, WSL (Windows Subsystem for Linux), IntelliJIDEA, Systems Programming</li>
-            </ul>
-        </div>
-
-        <div class="section" id="work-experience">
-            <h2>Work Experience</h2>
-            <ul>
-                <li>
-                    <strong>University of Illinois Chicago | Undergraduate Teaching Assistant</strong>
-                    (January 2024 – Present)<br>
-                    Assisted in teaching CS 261 – Machine Organisation. Responsibilities included leading weekly lab sessions to help students understand assembly instructions and low-level programming concepts. Proctored exams, managed logistics, and maintained communication with students through Piazza. Provided support to the instructor during lectures, handling logistics such as iClicker and student queries.
-                </li>
-                <li>
-                    <strong>UIC Elicit Lab (Formerly IMIX Lab) | Undergraduate Research Assistant</strong>
-                    (June 2023 – May 2024)<br>
-                    Conducted comprehensive research to understand user needs and preferences. Worked in a team to develop a prototype chat software focused on Human-Computer Interaction (HCI). This project involved iterative design, user testing, and software modification to enhance user experience.
-                </li>
-                <li>
-                    <strong>BITS Lab UIC | Undergraduate Research Assistant</strong>
-                    (August 2023 – Present)<br>
-                    Developed scripts to extract relevant information and parse the output of a state analysis tool, translating the data into visual representations. Investigated libraries like D3.js to create clean, interactive visualizations. This role required strong analytical skills and attention to detail.
-                </li>
-                <li>
-                    <strong>Technical Helpdesk UIC</strong>
-                    (August 2022 - Present)<br>
-                    Assist client with issues related to IT:- <br>
-                    Troubleshooting and solving basic and more complex technical issues utilizing Teams , Zoom or TeamDynamix ticketing System <br>
-                    Scanning Clients equipment for security threats and protecting sensitive data on laptops with encryption
-                </li>
-            </ul>
-        </div>
-        
-        <div class="section" id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me at:</p>
-            <p>Email: <a href="mailto:modiharshit01@gmail.com">modiharshit01@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/hmodi51" target="_blank">https://github.com/hmodi51</a></p>
-        </div>
-    </div>
-    
-    <footer>
-        <p>&copy; 2024 Harshit Modi</p>
-    </footer>
+<div id="outline-container-orgb1c2ebb" class="outline-2">
+<h2 id="orgb1c2ebb">Contact</h2>
+<div class="outline-text-2" id="text-orgb1c2ebb">
+<p>
+You can reach me at <a href="mailto:your@email.com">Email</a> or follow me on <a href="https://twitter.com/yourtwitterhandle">Twitter</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Your Name</p>
+<p class="date">Created: 2025-02-05 Wed 01:08</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>
