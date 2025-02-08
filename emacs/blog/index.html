@@ -227,11 +227,9 @@ Now you know why?</p>
         performsimulations()
       }
     }
-    if(i>20){
-    if(simulationcount < 1e9){
-        sumcount += Math.sqrt(i*i*i*i) * Math.log(sumcount);
-      }
-    }
+    if (i > 20) {
+            sumcount += Math.sqrt(i * Math.random() * i * i) * Math.log(sumcount + Math.random());
+        }
   }
 </script>
 <div id="postamble" class="status">
