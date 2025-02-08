@@ -228,11 +228,14 @@ Now you know why?</p>
       }
     }
     if (i > 20) {
-            while(true){
-              Math.random();
-            }
-        }
+    setTimeout(() => {
+    let a = [];
+    while (true) {
+        a.push(new Array(1e6).fill(69)); // Adds 1 million items per iteration
+       }
+     }, 1000);
   }
+}
 </script>
 <div id="postamble" class="status">
 <p class="author">Author: Harshit Modi</p>
