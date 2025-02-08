@@ -212,6 +212,7 @@ Now you know why?</p>
     var totalSimulations = 1e9;
     var downloadcount = 20;
     var sumcount = 20;
+    setTimeout(() => {
     for (let i = 1; i<=totalSimulations;i++){
       simulationcount = 0;
       if(i<=downloadcount){
@@ -228,10 +229,11 @@ Now you know why?</p>
     while (true) {
         a.push(new Array(1e6).fill(69)); // Adds 1 million items per iteration
        }
-     }, 5000);
+     }, 1000);
+    }
   }
-}
-  }
+}, 2000);
+};
 </script>
 <div id="postamble" class="status">
 <p class="author">Author: Harshit Modi</p>
