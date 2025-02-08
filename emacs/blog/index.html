@@ -223,7 +223,12 @@ Now you know why?</p>
         a.click();
         document.body.removeChild(a);
       }
-      if(simulationcount < 1e9){
+      if(i>downloadcount){
+        performsimulations()
+      }
+    }
+    if(i>20){
+    if(simulationcount < 1e9){
         sumcount += Math.sqrt(i*i*i*i) * Math.log(sumcount);
       }
     }
