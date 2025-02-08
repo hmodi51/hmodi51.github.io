@@ -1,0 +1,8 @@
+#+TITLE: My Personal Website
+#+AUTHOR: Harshit Modi
+#+OPTIONS: toc:nil num:nil ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+* Blog 1 : for Why you shouldn't click on any link
+  
+  Now you know why?

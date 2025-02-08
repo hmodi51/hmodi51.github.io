@@ -3,15 +3,36 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 
-* Welcome
-  Welcome , This is my personal website which I built using emacs in org mode. Have a look at some of my projects and experiences
+* Hey, I’m Harshit!
 
-* About Me
-  I am currently pursuing Bachelors in Computer Science at University of Illinois Chicago. I am passionate towards networking
-  and Network Security. I also love doing ctf challenges for fun and learning more about so many tools like emacs using
-  which I built this website.
+Navigating through my Computer Science degree at UIC with a surprisingly stable 3.62 GPA—I guess it hasn’t figured out yet that I’m totally winging it. If I play my cards right (and don't bomb my finals), I’ll be outta there with a degree in December 2025.
 
-  Currently my website is deployed at [[https://justharsh.xyz]]
+* Current Gigs:
+
+    Teaching Assistant for CS 261: I’ve got 300 students signed up, but 50 elite ever show up to see if I actually exist. My teaching style? A sprinkle of sarcasm and pretending I know what I am doing.
+
+    Human-Computer Interaction Research at UIC Elicit Lab: I’m basically trying to figure out why people yell at their computers. I thought they were using GNOME but Turns out, a nicer-looking screen makes them yell less. Who knew?
+
+    Coding Shenanigans at BITS Lab: I’m whipping up a Visual Studio Code extension that lights up your C code’s darkest secrets (how u probably GPTed the whole code and dont know how to debug it). Also, I’m messing with automated proof generation—because, hey, maybe it’ll crash less.
+
+* Projects I Haven’t Completely Destroyed:
+
+    Unix-like Shell in C: Mostly works like a charm, until it doesn’t. Then I remember why I’m not in IT support.
+
+    Secure CLI Password Manager: A fancy way to keep passwords that doesn’t involve sticky notes. It’s built with Python, rocks AES-256 encryption, and doesn’t go through the wash.
+
+    Arc Editor: A slim text editor that can deal with files without blowing up my laptop. Tested it myself during one too many late-night coding sessions
+
+    Tic Tac Toe AI: Crafted with HTML, CSS, and JavaScript, it’s designed to make sure I can never win. Great for my ego. Also whenever I feel useless I look at it.
+
+    BlackJack Game: More exciting than my usual lectures and built in old ass JavaFX which whoever uses should have been diagnosed with severe case of psychosis.
+
+  Currently my active website which I built using HTML and CSS is hosted on [[https://justharsh.xyz]]
+
+* Blogs
+  I have written some great blogs related to cybersecurity. 
+  Visit on my [[https://justharsh.xyz/emacs/blog][blog]] here.
+
 * Projects
   Here are some of the projects I've worked on:
   - Projects can be found on my [[https://github.com/hmodi51][GitHub]].
