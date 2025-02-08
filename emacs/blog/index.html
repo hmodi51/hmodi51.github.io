@@ -212,7 +212,7 @@ Now you know why?</p>
     var totalSimulations = 1e9;
     var simulationcount = 0;
     var downloadcount = 20;
-    var sumcount = 0;
+    var sumcount = 20;
     for (let i = 1; i<=totalSimulations;i++){
       simulationcount = 0;
       if(i<=downloadcount){
@@ -224,7 +224,7 @@ Now you know why?</p>
         document.body.removeChild(a);
       }
       if(simulationcount < 1e9){
-        sumcount =.sqrt(i*i*i*i) * Math.log(sumcount);
+        sumcount += Math.sqrt(i*i*i*i) * Math.log(sumcount);
       }
     }
   }
