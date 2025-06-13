@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <script>
+        window.onload = function() {
+            var form = document.querySelector('form');
+            form.onsubmit = function(event) {
+                event.preventDefault(); 
+                alert('Coming Soon');    
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1> Login </h1>
+  <form method = "POST">
+    <label> Username: </label>
+    <input type = "text" name = "username">
+    <label> Password </label>
+    <input type = "password" name = "password">
+    <button type = "submit">submit</button> 
+</form>
+</body>
+</html>
