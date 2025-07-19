@@ -271,13 +271,20 @@ params:
     items:
       - title: Brainfuck Compiler
         content: Brainfuck compiler in C that translates Brainfuck source code into x86-64 assembly
-        image: /images/projects/profile.png
         featured:
           name: Github Link
           link: https://github.com/hmodi51/brainfuck-compiler
         badges:
           - "C"
           - "Assembly"
+
+      - title: Web Server
+        content: A toy Web Server which is currently able to server static files
+        featured:
+          name: Github Link
+          link: https://github.com/hmodi51/web-server
+        badges:
+          - "C"
 
       # - title: Arc Editor
       #   content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
