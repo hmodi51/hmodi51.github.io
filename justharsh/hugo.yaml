@@ -144,7 +144,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
+      url: "/Resume.pdf"
       download: true
       newPage: false
     socialLinks:
@@ -176,6 +176,17 @@ params:
       - company: "Computer Science Department UIC"
         job: "Teaching Assistant"
         date: "Jan 2024 - Present"
+        content: |
+          I am currently working as a Teaching Assistant for Machine Organisation.
+
+          - Led weekly labs for 50+ students, enhancing their understanding of assembly instructions and system architecture.
+          - Proctored exams for 300 students, assisted with logistics.
+          - Engaged with over 300 students weekly, facilitating robust Q&A sessions to enhance learning and comprehension.
+          - Assisted instructors in lectures with logistics and student queries.
+
+      - company: "Linux User Group @ UIC"
+        job: "Officer"
+        date: "Jan 2025 - Present"
         content: |
           I am currently working as a Teaching Assistant for Machine Organisation.
 
