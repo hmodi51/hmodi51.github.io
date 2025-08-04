@@ -38,7 +38,7 @@ Menus:
     - identifier: games
       name: Games
       title: Games
-      url: /game
+      url: /TicTacToe
       weight: 2
     #Dropdown menu
     # - identifier: dropdown
