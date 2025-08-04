@@ -2,6 +2,7 @@ baseURL: "https://justharsh.xyz"
 languageCode: "en-us"
 title: "Harshit's Website"
 theme: hugo-profile
+disablePathToLower: true
 
 outputs:
   home:
