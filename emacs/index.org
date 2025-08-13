@@ -1,0 +1,53 @@
+#+TITLE: Harshit's Org Portfolio
+#+AUTHOR: Harshit Modi
+#+OPTIONS: toc:nil num:nil ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+This Website has been made using org mode because I am [[https://www.merriam-webster.com/dictionary/lazy][lazy]].
+
+*** If you are a recruiter wanting to look at my portfolio , visit [[https://justharsh.xyz][here]] as this website is not for you.
+
+* Hey, Harshit here
+
+Completely lost my mind while trying to get Computer Science degree at UIC with a surprisingly stable 3.62 GPA—I guess it hasn’t figured out yet that I’m totally winging it. If I play my cards right (and don't bomb my finals), I’ll be outta there with a degree in December 2025.
+
+* Current Gigs:
+
+    Teaching Assistant for CS 261: I’ve got 300 students signed up, but 50 elite ever show up to see if I actually exist. My teaching style? A sprinkle of sarcasm and pretending I know what I am doing.
+
+    Coding Shenanigans at BITS Lab: I’m whipping up a Visual Studio Code extension that lights up your C code’s darkest secrets (how u probably GPTed the whole code and dont know how to debug it). Also, I’m messing with automated proof generation—because, hey, maybe it’ll crash less.
+
+    Technician at Tech Helpdesk : Spending my day asking client if they tried turning it off and on again?
+
+    Officer at [[https://lug.cs.uic.edu/][Linux Users Group at UIC]] where I keep iterating that windows suck even though we use Active Directory ourselves. Hopefully no one ever gets to know that.😭
+
+* Past Gigs
+
+    Human-Computer Interaction Research at UIC Elicit Lab: I’m basically trying to figure out why people yell at their computers. I thought they were using GNOME but Turns out, a nicer-looking screen makes them yell less. Who knew?
+
+    Learning Assistant for Math : I basically again tried to pretend I know anything in Math.
+
+* Projects I Haven’t Completely Destroyed:
+
+    Unix-like Shell in C: Mostly works like a charm, until it doesn’t and then I remember why I am not a system adminstrator.
+
+    Secure CLI Password Manager: A fancy way to keep passwords that doesn’t involve sticky notes. It’s built with Python, rocks AES-256 encryption, and doesn’t go through the wash.
+
+    Arc Editor: A slim text editor that can deal with files without blowing up my laptop. Tested it myself during one too many late-night coding sessions
+
+    Tic Tac Toe AI: Crafted with HTML, CSS, and JavaScript, it’s designed to make sure I can never win. Great for my ego. Also whenever I feel useless I look at it.
+
+    BlackJack Game: More exciting than my usual lectures and built in old ass JavaFX which whoever uses should have been diagnosed with severe case of psychosis.
+
+  Currently my active website which I built using HTML and CSS is hosted on [[https://justharsh.xyz]]
+
+* Blogs
+  I have written some great blogs related to cybersecurity. 
+  Visit on my [[https://justharsh.xyz/emacs/blog][blog on why no one should click on random links ]] here.
+
+* Projects
+  Here are some of the projects I've worked on:
+  - Projects can be found on my [[https://github.com/hmodi51][GitHub]].
+
+* Contact
+  You can reach me at [[mailto:modiharshit01@gmail.com][Email]].
