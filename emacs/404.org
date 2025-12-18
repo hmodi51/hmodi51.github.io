@@ -1,2 +1,2 @@
-#+title:  404 Page not found
+#+title:  404
 #+AUTHOR: Harshit Modi
